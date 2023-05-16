@@ -1,0 +1,21 @@
+﻿<Window x:Class="MatModel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatModel"
+        mc:Ignorable="d"
+        Title="Математическое моделирование" Height="600" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Width="290" Height="60" FontSize="23" Content="Модель Мальтуса"  Name="modelMaltus" Click="modelMaltus_Click"/>
+        <Button Grid.Row="1" Width="290" Height="60" FontSize="23" Content="Модель Вольтерра-Лотки"  Name="modelLotkiVoltera" Click="modelLotkiVoltera_Click"/>
+        <Button Grid.Row="2" Width="290" Height="60" FontSize="23" Content="Матричная игра"  Name="matrichIgra" Click="matrichIgra_Click"/>
+        <Button Grid.Row="3" Width="290" Height="60" FontSize="23" Content="Дерево решений"  Name="derevoReshen" Click="derevoReshen_Click"/>
+    </Grid>
+</Window>

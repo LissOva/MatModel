@@ -1,0 +1,52 @@
+﻿<Window x:Class="MatModel.View.ModelLotkiVoltera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatModel.View"
+        mc:Ignorable="d"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:dvc="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        Title="Модель Вольтерра-Лотки" Height="600" Width="900"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Padding="15 0 0 0" FontSize="20" TextWrapping="WrapWithOverflow" Text="Потенциал популяции жертв (eps)"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Padding="15 0 0 0" FontSize="20" TextWrapping="WrapWithOverflow" Text="Коэффициент гибели хищников (beta)"/>
+            <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Padding="15 0 0 0" FontSize="20" TextWrapping="WrapWithOverflow" Text="Коэффициент гибели жертв (alfa)"/>
+            <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Padding="15 0 0 0" FontSize="20" TextWrapping="WrapWithOverflow" Text="Коэффициент роста (delta)"/>
+            <TextBlock Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Padding="15 0 0 0" FontSize="20" TextWrapping="WrapWithOverflow" Text="Исходное число жертв (x0)"/>
+            <TextBlock Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Padding="15 0 0 0" FontSize="20" TextWrapping="WrapWithOverflow" Text="Исходное число хищников (y0)"/>
+            <TextBlock Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Padding="15 0 0 0" FontSize="20" TextWrapping="WrapWithOverflow" Text="Число циклов"/>
+            <TextBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" FontSize="20" Width="100" Height="35" Name="epsBox" />
+            <TextBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" FontSize="20" Width="100" Height="35" Name="betaBox" />
+            <TextBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" FontSize="20" Width="100" Height="35" Name="alfBox" />
+            <TextBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" FontSize="20" Width="100" Height="35" Name="delBox" />
+            <TextBox Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" FontSize="20" Width="100" Height="35" Name="x0Box" />
+            <TextBox Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" FontSize="20" Width="100" Height="35" Name="y0Box" />
+            <TextBox Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Right" Width="30" Height="35" Name="loopBox" />
+            <Button Grid.Column="1" Grid.Row="6" Height="35" Width="100" FontSize="20" Content="Готово" Name="okBut" Click="okBut_Click"/>
+        </Grid>
+        <WindowsFormsHost Grid.Column="1">
+            <dvc:Chart x:Name="Graph"/>
+        </WindowsFormsHost>
+    </Grid>
+</Window>
