@@ -41,7 +41,9 @@ namespace MatModel
 
         private void matrichIgra_Click(object sender, RoutedEventArgs e)
         {
-
+            View.MatrichIgra matrichIgra = new View.MatrichIgra();
+            this.Hide();
+            matrichIgra.Show();
         }
 
         private void derevoReshen_Click(object sender, RoutedEventArgs e)
